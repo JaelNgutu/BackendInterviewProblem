@@ -40,6 +40,11 @@ namespace Application.Product.Queries
             }
 
             // Filter by price range
+            if (request.ProductSearch.MinPrice > 0 && request.ProductSearch.MaxPrice > 0 && request.ProductSearch.MinPrice > request.ProductSearch.MaxPrice)
+            {
+                // Handle the case where MaxPrice is less than MinPrice 
+                throw new ApiException(HttpStatusCode.BadRequest, "MaxPrice cannot be less than MinPrice");
+            }
             if (request.ProductSearch.MinPrice > 0)
             {
                 products = products.Where(p => p.Price >= request.ProductSearch.MinPrice);

@@ -1,12 +1,4 @@
 ﻿using Application.Product.Enums;
-using Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace Application.Product.Queries;
 
@@ -19,5 +11,5 @@ public sealed record SearchProductsDTO
     public int MaxPrice { get; set; }
 
     public SortOrder SortOrder { get; set; }
-   
+
 }

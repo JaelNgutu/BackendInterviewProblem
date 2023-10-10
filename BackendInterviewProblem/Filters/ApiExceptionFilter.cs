@@ -12,7 +12,7 @@ namespace BackendInterviewProblem.Filters
         {
             _exceptionHandlers = new Dictionary<Type, Action<ExceptionContext>>
             {
-                { typeof(ApiException), HandleNotFoundException }
+                { typeof(ApiException), HandleCustomException }
 
             };
         }
@@ -31,7 +31,7 @@ namespace BackendInterviewProblem.Filters
                 return;
             }
         }
-        private static void HandleNotFoundException(ExceptionContext context)
+        private static void HandleCustomException(ExceptionContext context)
         {
             var details = ApiResult.Error(context.Exception.Message);
             context.Result = new ObjectResult(details)
