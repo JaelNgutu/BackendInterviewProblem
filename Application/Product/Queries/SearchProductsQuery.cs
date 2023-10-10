@@ -75,7 +75,7 @@ namespace Application.Product.Queries
         {
             var existingProducts = source.Where(x => x.Name.ToLower().Contains(name.ToLower()));
 
-            if (existingProducts.Count() > 1)
+            if (existingProducts.Count() > 0)
             {
                 return existingProducts;
             }
@@ -89,7 +89,7 @@ namespace Application.Product.Queries
         private async Task<IQueryable<Domain.Entities.Product>> CheckCategory(IQueryable<Domain.Entities.Product> source, string category)
         {
             var existingProducts = source.Where(x => x.Category.ToLower().Contains(category.ToLower()));
-            if (existingProducts.Count() > 1)
+            if (existingProducts.Count() > 0)
             {
                 return existingProducts;
             }
