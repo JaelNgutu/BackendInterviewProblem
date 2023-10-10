@@ -95,7 +95,7 @@ namespace Application.Product.Queries
             }
             else
             {
-                throw new ApiException(HttpStatusCode.NotFound, $" {category} - was not found");
+                throw new ApiException(HttpStatusCode.NotFound, $" {category} - category was not found");
             }
         }
 
