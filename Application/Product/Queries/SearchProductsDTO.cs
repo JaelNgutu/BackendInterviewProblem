@@ -10,6 +10,6 @@ public sealed record SearchProductsDTO
     public int MinPrice { get; set; }
     public int MaxPrice { get; set; }
 
-    public SortOrder SortOrder { get; set; }
+    public SortOrder? SortOrder { get; set; }
 
 }
