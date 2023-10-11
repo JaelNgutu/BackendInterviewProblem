@@ -18,7 +18,7 @@ public static class IQueryableExtensions
 
     private static (int pageSize, int pageIndex) SanitizePaginationValues(int? pageIndex, int? pageSize)
     {
-        pageSize = pageSize is null or < 1 ? 10 : pageSize;
+        pageSize = pageSize is null or < 1 ? 5 : pageSize;
         pageIndex = pageIndex is null or < 1 ? 1 : pageIndex;
 
         return (pageSize.Value, pageIndex.Value);
