@@ -6,7 +6,7 @@ A web api used to search for products
 
 ## Architecture
 
-**Clean Architecture** Architecture used for this api
+**Clean Architecture** - Architecture used for this api
 
 
 ## 
